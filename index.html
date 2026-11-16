@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>多店舵跨境工作台｜Ozon 多店 ERP · 私有部署</title>
+<meta name="description" content="给 Ozon 多店卖家用的私有部署工作台（ERP）：多店订单、国内采购信息回填、首单与阶梯改价、国内物流监控、库存与问题件工单。数据在卖家自己的服务器上。">
+<link rel="canonical" href="https://multihelm.vetted-sourcing.com/"><link rel="alternate" hreflang="zh-CN" href="https://multihelm.vetted-sourcing.com/"><link rel="alternate" hreflang="en" href="https://multihelm.vetted-sourcing.com/en/"><link rel="alternate" hreflang="x-default" href="https://multihelm.vetted-sourcing.com/en/">
+<meta property="og:type" content="website"><meta property="og:title" content="多店舵跨境工作台｜Ozon 多店 ERP · 私有部署">
+<meta property="og:description" content="给 Ozon 多店卖家用的私有部署工作台（ERP）：多店订单、国内采购信息回填、首单与阶梯改价、国内物流监控、库存与问题件工单。数据在卖家自己的服务器上。"><meta property="og:image" content="https://multihelm.vetted-sourcing.com/assets/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "多店舵跨境工作台", "alternateName": ["多店舵跨境工作台", "MultiHelm"], "applicationCategory": "BusinessApplication", "applicationSubCategory": "ERP for Ozon marketplace sellers", "operatingSystem": "Web", "inLanguage": "zh-CN", "url": "https://multihelm.vetted-sourcing.com/", "description": "给 Ozon 多店卖家用的私有部署工作台（ERP）：多店订单、国内采购信息回填、首单与阶梯改价、国内物流监控、库存与问题件工单。数据在卖家自己的服务器上。", "featureList": ["首单改价", "阶梯改价", "公式定价与自动广告", "收藏与广告监测", "所有店铺的订单，一页处理完", "货到哪了，不用再去问"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "zh-CN", "mainEntity": [{"@type": "Question", "name": "数据放在哪？", "acceptedAnswer": {"@type": "Answer", "text": "放在你自己的服务器上。我们只在部署和维护时登录。"}}, {"@type": "Question", "name": "要不要换掉现在的工具？", "acceptedAnswer": {"@type": "Answer", "text": "不用一次换完，可以先接一两家店并行用，顺手了再扩大。"}}, {"@type": "Question", "name": "Ozon 的接口或规则变了怎么办？", "acceptedAnswer": {"@type": "Answer", "text": "月度维护里包含接口和规则变动的适配，以及故障处理。"}}, {"@type": "Question", "name": "多少钱？", "acceptedAnswer": {"@type": "Answer", "text": "一次性部署费加月度维护费，按店铺数量和要用的模块报价，演示之后给具体数字。"}}, {"@type": "Question", "name": "能先试再买吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。先看演示，再用一两家店试运行，验收后才付尾款。"}}, {"@type": "Question", "name": "和 Ozon 官方有关系吗？", "acceptedAnswer": {"@type": "Answer", "text": "没有。这是独立的第三方工具，平台名称只说明它用在哪里。"}}, {"@type": "Question", "name": "只有一两家店适合用吗？", "acceptedAnswer": {"@type": "Answer", "text": "不适合。一两家店用免费的通用 ERP 就够了。"}}]}</script>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#EEF1F8;--card:#fff;--ink:#1B2140;--mute:#5A628A;--acc:#4B5BD7;--soft:#E1E5FB}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI","Helvetica Neue",Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+html[lang=en] body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;gap:12px;padding:20px 0;font-weight:600;font-size:18px}
+.logo{flex:none;width:36px;height:36px;border-radius:10px;background:var(--acc);display:flex;align-items:center;justify-content:center}
+.logo i{display:block;width:15px;height:15px;border:3px solid #fff;border-radius:4px}
+header nav{margin-left:auto;display:flex;align-items:center;gap:14px}
+header nav a.lang{font-size:14px;font-weight:500;color:var(--mute);text-decoration:none}
+header nav a.btn{font-size:15px;font-weight:500;color:#fff;background:var(--acc);padding:9px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.2;margin:40px 0 0;letter-spacing:-.5px;text-wrap:balance}
+h1 em,h2 em{font-style:normal;color:var(--acc)}
+h2{font-size:clamp(26px,4vw,38px);line-height:1.3;margin:0 0 8px;text-wrap:balance}
+.lead{font-size:clamp(17px,2.4vw,21px);color:var(--mute);max-width:680px;margin:20px 0 0}
+.pill{display:inline-block;font-size:14px;font-weight:500;color:#2E7D5B;background:#DDF3E8;padding:7px 16px;border-radius:999px;margin-top:22px}
+.cta{display:inline-block;margin-top:28px;font-size:17px;font-weight:600;color:#fff;background:var(--acc);padding:14px 30px;border-radius:14px;text-decoration:none}
+.card{background:var(--card);border-radius:20px;box-shadow:0 10px 40px rgba(40,52,120,.10);overflow:hidden}
+.frame{margin-top:40px}
+.frame .bar{height:32px;background:#F4F6FC;display:flex;align-items:center;gap:7px;padding:0 14px}
+.frame .bar b{width:9px;height:9px;border-radius:50%;background:#CBD1E6;display:block}
+.frame img{display:block;width:100%;height:auto}
+.cap{font-size:13px;color:#8A90AE;margin:10px 4px 0}
+section{padding:72px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}
+.cell{background:var(--card);border-radius:16px;padding:22px;box-shadow:0 6px 24px rgba(40,52,120,.07)}
+.cell b{display:block;font-size:17px}
+.cell span{display:block;font-size:15px;color:var(--mute);margin-top:6px}
+.body{color:var(--mute);margin:14px 0 0;max-width:720px}
+dl.facts{margin:28px 0 0;background:var(--card);border-radius:18px;box-shadow:0 6px 24px rgba(40,52,120,.07);padding:6px 22px}
+dl.facts div{display:grid;grid-template-columns:minmax(96px,180px) 1fr;gap:16px;padding:14px 0;border-bottom:1px solid #EEF1F8}
+dl.facts div:last-child{border-bottom:0}
+dl.facts dt{color:var(--mute);font-size:15px}
+dl.facts dd{margin:0;font-weight:500}
+ol.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:12px;counter-reset:s}
+ol.steps li{counter-increment:s;background:var(--card);border-radius:16px;padding:18px 20px 18px 64px;position:relative;box-shadow:0 6px 24px rgba(40,52,120,.07)}
+ol.steps li:before{content:counter(s);position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:10px;background:var(--soft);color:var(--acc);font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.steps b{display:block}
+ol.steps span{color:var(--mute);font-size:15px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:28px}
+.col{border-radius:18px;padding:24px}
+.col.yes{background:var(--card);box-shadow:0 6px 24px rgba(40,52,120,.07)}
+.col.no{background:#E4E7F2}
+.col h3{margin:0 0 10px;font-size:18px}
+.col p{margin:0 0 8px;color:#3F476E;font-size:15px}
+.qa{background:var(--card);border-radius:14px;padding:18px 20px;margin-top:10px;box-shadow:0 6px 24px rgba(40,52,120,.07)}
+.qa h3{margin:0;font-size:17px}
+.qa p{color:var(--mute);margin:8px 0 0}
+.contact{margin:72px 0 0;background:var(--acc);color:#fff;border-radius:24px;padding:40px 28px;text-align:center}
+.contact h2{color:#fff}
+.contact p{opacity:.9;margin:8px 0 0}
+.contact .way{text-decoration:none;display:inline-block;margin-top:20px;background:#fff;color:var(--acc);font-weight:700;font-size:18px;padding:12px 26px;border-radius:12px}
+footer{padding:36px 0 48px;font-size:13px;color:#8A90AE;text-align:center}
+</style></head><body><div class="wrap">
+<header><div class="logo"><i></i></div>多店舵跨境工作台<nav><a class="lang" href="en/" hreflang="en">English</a><a class="btn" href="#contact">预约演示</a></nav></header>
+<main>
+<h1>给 <em>Ozon 多店卖家</em>用的一套工作台</h1>
+<p class="lead">订单、采购、改价、仓库，放在一个工作台里。部署在你自己的服务器上，数据和店铺密钥都在你手里。</p>
+<a class="cta" href="#contact">预约 15 分钟演示</a>
+<div class="card frame"><div class="bar"><b></b><b></b><b></b></div><img src="assets/orders.jpg" alt="界面截图为演示数据。" loading="lazy" width="1470" height="780"></div><p class="cap">界面截图为演示数据。</p>
+
+<section><h2>它是什么</h2><p class="body">多店舵跨境工作台是一套给 Ozon 多店卖家用的私有部署工作台（ERP）。它把多店订单、国内采购信息回填、首单与阶梯改价、国内物流监控、库存与问题件工单放在同一个系统里。每个客户一套独立实例，部署在客户自己的服务器上。</p><dl class="facts"><div><dt>适用平台</dt><dd>Ozon</dd></div><div><dt>适合</dt><dd>10 家店以上、在国内平台采购的卖家</dd></div><div><dt>部署方式</dt><dd>私有部署，一个客户一套独立实例</dd></div><div><dt>界面语言</dt><dd>简体中文</dd></div><div><dt>交付流程</dt><dd>演示 → 部署 → 试运行 → 验收后付尾款，之后按月维护</dd></div><div><dt>价格</dt><dd>按店铺数量和模块报价</dd></div></dl></section>
+
+<section><h2>店一多，这几件事最<em>耗人</em></h2><div class="grid"><div class="cell"><b>订单散在几十个店铺后台</b><span>来回切账号看单、打面单，漏单和重复处理都出在这里。</span></div><div class="cell"><b>采购信息记在表格和聊天里</b><span>哪一单在哪买的、多少钱、快递到哪了，要翻半天。</span></div><div class="cell"><b>改价靠手动，一家家点</b><span>首单价、活动价、阶梯价各一套，店多了没人敢保证没改错。</span></div><div class="cell"><b>仓库和运营对不上</b><span>到货没人知道，问题件在聊天里来回问，最后超时取消。</span></div></div></section>
+
+<section><h2>所有店铺的订单，<em>一页处理完</em></h2><p class="body">按账号、店铺、状态、单号筛选；拉取新订单、同步状态、批量打印面单、拆分订单。采购平台、采购单号、成本和快递直接记在订单行里，页面底部汇总销售额、已知成本和预计利润。</p><div class="card frame"><div class="bar"><b></b><b></b><b></b></div><img src="assets/orders.jpg" alt="界面截图为演示数据。" loading="lazy" width="1470" height="780"></div><p class="cap">界面截图为演示数据。</p></section>
+
+<section><h2>改价和推广，<em>先预览再确认</em></h2><p class="body">多店一起读取、一起处理。所有写入都是：预览 → 确认 → 只写一次 → 写完回读核对。</p><div class="grid"><div class="cell"><b>首单改价</b><span>新品首单阶段单独一套价格规则。</span></div><div class="cell"><b>阶梯改价</b><span>按出单情况分阶梯调整，不用一家家手改。</span></div><div class="cell"><b>公式定价与自动广告</b><span>按克重和成本算推广价，开广告、退活动、改价一次做完。</span></div><div class="cell"><b>收藏与广告监测</b><span>出单入收藏、CPO 广告收藏、广告概览。</span></div></div><div class="card frame"><div class="bar"><b></b><b></b><b></b></div><img src="assets/promotion.jpg" alt="界面截图为演示数据。" loading="lazy" width="1470" height="780"></div><p class="cap">界面截图为演示数据。</p></section>
+
+<section><h2>货到哪了，<em>不用再去问</em></h2><p class="body">国内物流监控把未拉取物流、待取件、运输中、已签收分开，签收几天还没发货一眼筛出来。库存、货架和问题件工单在同一个系统里，仓库和运营不用靠聊天传话。</p><div class="card frame"><div class="bar"><b></b><b></b><b></b></div><img src="assets/logistics.jpg" alt="界面截图为演示数据。" loading="lazy" width="1470" height="780"></div><p class="cap">界面截图为演示数据。</p></section>
+
+<section><h2>不是卖一个安装包，是<em>帮你装好、跑起来</em></h2><p class="lead">一个客户一套独立实例：独立的数据、密钥和域名，不和别的卖家混在一起。</p><ol class="steps"><li><b>看演示</b><span>用演示数据走一遍订单、采购、改价、仓库流程。</span></li><li><b>对流程</b><span>说清你现在有几家店、自己的仓还是第三方仓、怎么采购。</span></li><li><b>部署到你的服务器</b><span>安装、初始化、接入店铺，由我们来做。</span></li><li><b>先用一两家店试运行</b><span>你的人实际用起来，有问题当场改。</span></li><li><b>验收后再付尾款</b><span>之后按月维护：平台接口变动、故障处理、小调整。</span></li></ol></section>
+
+<section><h2>先说清楚<em>适合谁、不适合谁</em></h2><div class="cols">
+<div class="col yes"><h3>适合</h3><p>10 家店以上的 Ozon 卖家</p><p>在国内平台采购、需要回填采购信息</p><p>有自己的仓或固定合作仓</p><p>在意数据和店铺密钥放在自己手里</p></div><div class="col no"><h3>不适合</h3><p>只有一两家店：免费的通用 ERP 就够用</p><p>想要下载即用、自己安装的软件</p><p>需要多平台（亚马逊、Temu 等）统一管理</p></div></div></section>
+
+<section><h2>常见问题</h2><div class="qa"><h3>数据放在哪？</h3><p>放在你自己的服务器上。我们只在部署和维护时登录。</p></div><div class="qa"><h3>要不要换掉现在的工具？</h3><p>不用一次换完，可以先接一两家店并行用，顺手了再扩大。</p></div><div class="qa"><h3>Ozon 的接口或规则变了怎么办？</h3><p>月度维护里包含接口和规则变动的适配，以及故障处理。</p></div><div class="qa"><h3>多少钱？</h3><p>一次性部署费加月度维护费，按店铺数量和要用的模块报价，演示之后给具体数字。</p></div><div class="qa"><h3>能先试再买吗？</h3><p>可以。先看演示，再用一两家店试运行，验收后才付尾款。</p></div><div class="qa"><h3>和 Ozon 官方有关系吗？</h3><p>没有。这是独立的第三方工具，平台名称只说明它用在哪里。</p></div><div class="qa"><h3>只有一两家店适合用吗？</h3><p>不适合。一两家店用免费的通用 ERP 就够了。</p></div></section>
+
+<div class="contact" id="contact"><h2>预约 15 分钟演示</h2><p>告诉我们你有几家店、怎么采购、用不用自己的仓，我们按你的情况演示。</p><div class="way">预约邮箱即将公布</div></div>
+</main>
+<footer>界面截图均为演示数据。本产品不隶属于 Ozon，平台名称仅说明适用场景。</footer>
+</div></body></html>

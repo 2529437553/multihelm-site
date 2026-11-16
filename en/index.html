@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MultiHelm — self-hosted workbench for multi-store Ozon sellers</title>
+<meta name="description" content="A self-hosted workbench (ERP) for sellers running many Ozon stores: multi-store orders, purchase records, first-sale and tiered repricing, domestic logistics tracking, inventory and issue tickets. Data stays on the seller&#x27;s own server.">
+<link rel="canonical" href="https://multihelm.vetted-sourcing.com/en/"><link rel="alternate" hreflang="zh-CN" href="https://multihelm.vetted-sourcing.com/"><link rel="alternate" hreflang="en" href="https://multihelm.vetted-sourcing.com/en/"><link rel="alternate" hreflang="x-default" href="https://multihelm.vetted-sourcing.com/en/">
+<meta property="og:type" content="website"><meta property="og:title" content="MultiHelm — self-hosted workbench for multi-store Ozon sellers">
+<meta property="og:description" content="A self-hosted workbench (ERP) for sellers running many Ozon stores: multi-store orders, purchase records, first-sale and tiered repricing, domestic logistics tracking, inventory and issue tickets. Data stays on the seller&#x27;s own server."><meta property="og:image" content="https://multihelm.vetted-sourcing.com/assets/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "MultiHelm", "alternateName": ["多店舵跨境工作台", "MultiHelm"], "applicationCategory": "BusinessApplication", "applicationSubCategory": "ERP for Ozon marketplace sellers", "operatingSystem": "Web", "inLanguage": "zh-CN", "url": "https://multihelm.vetted-sourcing.com/en/", "description": "A self-hosted workbench (ERP) for sellers running many Ozon stores: multi-store orders, purchase records, first-sale and tiered repricing, domestic logistics tracking, inventory and issue tickets. Data stays on the seller's own server.", "featureList": ["First-sale repricing", "Tiered repricing", "Formula pricing and automatic ads", "Favorites and ad monitoring", "All stores' orders, handled on one page", "Know where the goods are without asking"]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Where is the data stored?", "acceptedAnswer": {"@type": "Answer", "text": "On your own server. We log in only for deployment and maintenance."}}, {"@type": "Question", "name": "Do we have to replace our current tools?", "acceptedAnswer": {"@type": "Answer", "text": "No. Start with one or two stores in parallel and expand when it works for you."}}, {"@type": "Question", "name": "What happens when Ozon changes its API or rules?", "acceptedAnswer": {"@type": "Answer", "text": "Adapting to API and rule changes is part of monthly maintenance, along with incident handling."}}, {"@type": "Question", "name": "How much does it cost?", "acceptedAnswer": {"@type": "Answer", "text": "A one-time deployment fee plus a monthly maintenance fee, quoted by number of stores and modules after the demo."}}, {"@type": "Question", "name": "Can we try it before paying in full?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Demo first, then a trial run with one or two stores. The final payment is due only after acceptance."}}, {"@type": "Question", "name": "Is it affiliated with Ozon?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is an independent third-party tool; the platform name only describes where it is used."}}, {"@type": "Question", "name": "What language is the interface in?", "acceptedAnswer": {"@type": "Answer", "text": "Simplified Chinese at the moment."}}, {"@type": "Question", "name": "Is it suitable for one or two stores?", "acceptedAnswer": {"@type": "Answer", "text": "No. With one or two stores a free general-purpose ERP is enough."}}]}</script>
+<style>
+*{box-sizing:border-box}
+:root{--bg:#EEF1F8;--card:#fff;--ink:#1B2140;--mute:#5A628A;--acc:#4B5BD7;--soft:#E1E5FB}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI","Helvetica Neue",Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+html[lang=en] body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;gap:12px;padding:20px 0;font-weight:600;font-size:18px}
+.logo{flex:none;width:36px;height:36px;border-radius:10px;background:var(--acc);display:flex;align-items:center;justify-content:center}
+.logo i{display:block;width:15px;height:15px;border:3px solid #fff;border-radius:4px}
+header nav{margin-left:auto;display:flex;align-items:center;gap:14px}
+header nav a.lang{font-size:14px;font-weight:500;color:var(--mute);text-decoration:none}
+header nav a.btn{font-size:15px;font-weight:500;color:#fff;background:var(--acc);padding:9px 18px;border-radius:999px;text-decoration:none;white-space:nowrap}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.2;margin:40px 0 0;letter-spacing:-.5px;text-wrap:balance}
+h1 em,h2 em{font-style:normal;color:var(--acc)}
+h2{font-size:clamp(26px,4vw,38px);line-height:1.3;margin:0 0 8px;text-wrap:balance}
+.lead{font-size:clamp(17px,2.4vw,21px);color:var(--mute);max-width:680px;margin:20px 0 0}
+.pill{display:inline-block;font-size:14px;font-weight:500;color:#2E7D5B;background:#DDF3E8;padding:7px 16px;border-radius:999px;margin-top:22px}
+.cta{display:inline-block;margin-top:28px;font-size:17px;font-weight:600;color:#fff;background:var(--acc);padding:14px 30px;border-radius:14px;text-decoration:none}
+.card{background:var(--card);border-radius:20px;box-shadow:0 10px 40px rgba(40,52,120,.10);overflow:hidden}
+.frame{margin-top:40px}
+.frame .bar{height:32px;background:#F4F6FC;display:flex;align-items:center;gap:7px;padding:0 14px}
+.frame .bar b{width:9px;height:9px;border-radius:50%;background:#CBD1E6;display:block}
+.frame img{display:block;width:100%;height:auto}
+.cap{font-size:13px;color:#8A90AE;margin:10px 4px 0}
+section{padding:72px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px}
+.cell{background:var(--card);border-radius:16px;padding:22px;box-shadow:0 6px 24px rgba(40,52,120,.07)}
+.cell b{display:block;font-size:17px}
+.cell span{display:block;font-size:15px;color:var(--mute);margin-top:6px}
+.body{color:var(--mute);margin:14px 0 0;max-width:720px}
+dl.facts{margin:28px 0 0;background:var(--card);border-radius:18px;box-shadow:0 6px 24px rgba(40,52,120,.07);padding:6px 22px}
+dl.facts div{display:grid;grid-template-columns:minmax(96px,180px) 1fr;gap:16px;padding:14px 0;border-bottom:1px solid #EEF1F8}
+dl.facts div:last-child{border-bottom:0}
+dl.facts dt{color:var(--mute);font-size:15px}
+dl.facts dd{margin:0;font-weight:500}
+ol.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:12px;counter-reset:s}
+ol.steps li{counter-increment:s;background:var(--card);border-radius:16px;padding:18px 20px 18px 64px;position:relative;box-shadow:0 6px 24px rgba(40,52,120,.07)}
+ol.steps li:before{content:counter(s);position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:10px;background:var(--soft);color:var(--acc);font-weight:700;display:flex;align-items:center;justify-content:center}
+ol.steps b{display:block}
+ol.steps span{color:var(--mute);font-size:15px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:28px}
+.col{border-radius:18px;padding:24px}
+.col.yes{background:var(--card);box-shadow:0 6px 24px rgba(40,52,120,.07)}
+.col.no{background:#E4E7F2}
+.col h3{margin:0 0 10px;font-size:18px}
+.col p{margin:0 0 8px;color:#3F476E;font-size:15px}
+.qa{background:var(--card);border-radius:14px;padding:18px 20px;margin-top:10px;box-shadow:0 6px 24px rgba(40,52,120,.07)}
+.qa h3{margin:0;font-size:17px}
+.qa p{color:var(--mute);margin:8px 0 0}
+.contact{margin:72px 0 0;background:var(--acc);color:#fff;border-radius:24px;padding:40px 28px;text-align:center}
+.contact h2{color:#fff}
+.contact p{opacity:.9;margin:8px 0 0}
+.contact .way{text-decoration:none;display:inline-block;margin-top:20px;background:#fff;color:var(--acc);font-weight:700;font-size:18px;padding:12px 26px;border-radius:12px}
+footer{padding:36px 0 48px;font-size:13px;color:#8A90AE;text-align:center}
+</style></head><body><div class="wrap">
+<header><div class="logo"><i></i></div>MultiHelm<nav><a class="lang" href="../" hreflang="zh-CN">中文</a><a class="btn" href="#contact">Book a demo</a></nav></header>
+<main>
+<h1>A workbench for <em>multi&#8209;store Ozon sellers</em></h1>
+<p class="lead">Orders, purchasing, repricing and warehouse work in one place. It runs on your own server, so your data and store API keys stay with you.</p>
+<a class="cta" href="#contact">Book a 15-minute demo</a>
+<div class="card frame"><div class="bar"><b></b><b></b><b></b></div><img src="../assets/orders.jpg" alt="Screenshots show demo data. The interface is currently in Simplified Chinese." loading="lazy" width="1470" height="780"></div><p class="cap">Screenshots show demo data. The interface is currently in Simplified Chinese.</p>
+
+<section><h2>What it is</h2><p class="body">MultiHelm is a self-hosted workbench (ERP) for sellers who run many Ozon stores and source products from Chinese marketplaces. It brings multi-store orders, purchase records, first-sale and tiered repricing, domestic logistics tracking, inventory and issue tickets into one system. Each customer gets a separate instance on their own server.</p><dl class="facts"><div><dt>Platform</dt><dd>Ozon</dd></div><div><dt>Best for</dt><dd>Sellers with 10 or more stores who buy from Chinese marketplaces such as 1688 and Pinduoduo</dd></div><div><dt>Deployment</dt><dd>Self-hosted, one isolated instance per customer</dd></div><div><dt>Interface language</dt><dd>Simplified Chinese</dd></div><div><dt>Delivery</dt><dd>Demo → deployment → trial run → final payment after acceptance, then monthly maintenance</dd></div><div><dt>Pricing</dt><dd>Quoted by number of stores and modules</dd></div></dl></section>
+
+<section><h2>With many stores, these four jobs <em>eat the day</em></h2><div class="grid"><div class="cell"><b>Orders are spread across dozens of store back offices</b><span>Switching accounts to check orders and print labels is where missed and duplicated work comes from.</span></div><div class="cell"><b>Purchase details live in spreadsheets and chats</b><span>Finding which order was bought where, for how much, and where the parcel is takes a long search.</span></div><div class="cell"><b>Repricing is done by hand, store by store</b><span>First-sale, promotion and tiered prices each have their own rules. With many stores nobody can be sure every change was right.</span></div><div class="cell"><b>Warehouse and operations are out of sync</b><span>Nobody knows a parcel has arrived, problem items are discussed in chat, and orders end up cancelled for lateness.</span></div></div></section>
+
+<section><h2>All stores' orders, <em>handled on one page</em></h2><p class="body">Filter by account, store, status or order number. Pull new orders, sync status, print labels in bulk and split orders. Purchase platform, purchase order number, cost and courier are recorded on the order row; the page footer totals sales, known cost and estimated profit.</p><div class="card frame"><div class="bar"><b></b><b></b><b></b></div><img src="../assets/orders.jpg" alt="Screenshots show demo data. The interface is currently in Simplified Chinese." loading="lazy" width="1470" height="780"></div><p class="cap">Screenshots show demo data. The interface is currently in Simplified Chinese.</p></section>
+
+<section><h2>Repricing and promotion: <em>preview first, then confirm</em></h2><p class="body">Read and process many stores together. Every write follows the same rule: preview → confirm → write once → read back to verify.</p><div class="grid"><div class="cell"><b>First-sale repricing</b><span>A separate price rule for a product&#x27;s first-sale stage.</span></div><div class="cell"><b>Tiered repricing</b><span>Adjust prices in tiers as orders come in, without editing store by store.</span></div><div class="cell"><b>Formula pricing and automatic ads</b><span>Calculate a promotion price from weight and cost; start ads, leave promotions and reprice in one run.</span></div><div class="cell"><b>Favorites and ad monitoring</b><span>Add sold items to favorites, CPO ad favorites, ad overview.</span></div></div><div class="card frame"><div class="bar"><b></b><b></b><b></b></div><img src="../assets/promotion.jpg" alt="Screenshots show demo data. The interface is currently in Simplified Chinese." loading="lazy" width="1470" height="780"></div><p class="cap">Screenshots show demo data. The interface is currently in Simplified Chinese.</p></section>
+
+<section><h2>Know where the goods are <em>without asking</em></h2><p class="body">Domestic logistics tracking separates parcels not yet tracked, awaiting pickup, in transit and signed for, and filters orders signed for days ago but not yet shipped. Inventory, shelves and issue tickets sit in the same system, so warehouse and operations stop relaying messages in chat.</p><div class="card frame"><div class="bar"><b></b><b></b><b></b></div><img src="../assets/logistics.jpg" alt="Screenshots show demo data. The interface is currently in Simplified Chinese." loading="lazy" width="1470" height="780"></div><p class="cap">Screenshots show demo data. The interface is currently in Simplified Chinese.</p></section>
+
+<section><h2>Not an installer you download. <em>We set it up and get it running</em></h2><p class="lead">One isolated instance per customer: separate data, keys and domain.</p><ol class="steps"><li><b>See a demo</b><span>Walk through orders, purchasing, repricing and warehouse flows on demo data.</span></li><li><b>Compare with your process</b><span>How many stores you run, own or third-party warehouse, how you purchase.</span></li><li><b>Deploy to your server</b><span>Installation, initial setup and store connection are done for you.</span></li><li><b>Trial run with one or two stores</b><span>Your team uses it for real work; problems are fixed as they come up.</span></li><li><b>Final payment after acceptance</b><span>Then monthly maintenance: platform API changes, incident handling, small adjustments.</span></li></ol></section>
+
+<section><h2>Who it is for, <em>and who it is not for</em></h2><div class="cols">
+<div class="col yes"><h3>A good fit</h3><p>Ozon sellers with 10 or more stores</p><p>Buying from Chinese marketplaces and recording purchases on each order</p><p>Own warehouse or a fixed partner warehouse</p><p>Want data and store keys on their own server</p><p>Team can work in a Chinese-language interface</p></div><div class="col no"><h3>Not a fit</h3><p>One or two stores: a free general-purpose ERP is enough</p><p>Want software to download and install yourself</p><p>Need one tool across Amazon, Temu and other platforms</p><p>Need an English or Russian interface today</p></div></div></section>
+
+<section><h2>Questions and answers</h2><div class="qa"><h3>Where is the data stored?</h3><p>On your own server. We log in only for deployment and maintenance.</p></div><div class="qa"><h3>Do we have to replace our current tools?</h3><p>No. Start with one or two stores in parallel and expand when it works for you.</p></div><div class="qa"><h3>What happens when Ozon changes its API or rules?</h3><p>Adapting to API and rule changes is part of monthly maintenance, along with incident handling.</p></div><div class="qa"><h3>How much does it cost?</h3><p>A one-time deployment fee plus a monthly maintenance fee, quoted by number of stores and modules after the demo.</p></div><div class="qa"><h3>Can we try it before paying in full?</h3><p>Yes. Demo first, then a trial run with one or two stores. The final payment is due only after acceptance.</p></div><div class="qa"><h3>Is it affiliated with Ozon?</h3><p>No. It is an independent third-party tool; the platform name only describes where it is used.</p></div><div class="qa"><h3>What language is the interface in?</h3><p>Simplified Chinese at the moment.</p></div><div class="qa"><h3>Is it suitable for one or two stores?</h3><p>No. With one or two stores a free general-purpose ERP is enough.</p></div></section>
+
+<div class="contact" id="contact"><h2>Book a 15-minute demo</h2><p>Tell us how many stores you run, how you purchase and whether you use your own warehouse. The demo follows your case.</p><div class="way">Contact email coming soon</div></div>
+</main>
+<footer>Screenshots show demo data. Not affiliated with Ozon; the platform name only describes where the product is used.</footer>
+</div></body></html>
