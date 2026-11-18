@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ozon 一单两件商品，采购单号和成本怎么逐件核对？｜多店舵 MultiHelm</title>
+  <meta name="description" content="用一笔双商品 Ozon 演示订单，按货号分别登记 1688 和拼多多的采购单号、国内快递单号与商品行采购总成本，再更正其中一行并复查。附真实操作截图和免登录演示。">
+  <link rel="canonical" href="https://multihelm.vetted-sourcing.com/guides/order-purchase-check/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Ozon 一单两件商品，采购单号和成本怎么逐件核对？">
+  <meta property="og:description" content="跟着一笔双商品演示订单，填两行采购资料，更正一行成本，再核对两行保存结果。">
+  <meta property="og:url" content="https://multihelm.vetted-sourcing.com/guides/order-purchase-check/">
+  <meta property="og:image" content="https://multihelm.vetted-sourcing.com/guides/order-purchase-check/after.jpg">
+  <style>
+    * { box-sizing: border-box }
+    :root { color-scheme: light; --ink:#1b2140; --muted:#515d7d; --accent:#4354c4; --line:#d7ddeb }
+    body { margin:0; color:var(--ink); background:#f4f5fb; font:16px/1.72 "PingFang SC","Microsoft YaHei",system-ui,sans-serif }
+    a { color:var(--accent); text-underline-offset:3px }
+    a:focus-visible { outline:3px solid #2945b7; outline-offset:4px }
+    .shell { margin:0 auto; max-width:970px; padding:0 clamp(16px,4vw,36px) }
+    header { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:20px 0; border-bottom:1px solid var(--line) }
+    .brand { display:inline-flex; align-items:center; gap:9px; color:var(--ink); font-weight:700; text-decoration:none }
+    .brand i { width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:#4b5bd7 }
+    .brand i::after { content:""; width:10px; height:10px; border:2px solid white; border-radius:3px }
+    header > a:last-child { font-size:14px }
+    article { padding:clamp(28px,5vw,56px) 0 32px }
+    h1,h2 { line-height:1.28; text-wrap:balance }
+    h1 { max-width:830px; margin:0; font-size:clamp(30px,4.4vw,52px); letter-spacing:-.04em }
+    h1 span { white-space:nowrap }
+    h2 { margin:0 0 14px; font-size:clamp(23px,3vw,30px); letter-spacing:-.02em }
+    p { max-width:48em; margin:0 0 12px }
+    .byline,figcaption,.note { color:var(--muted); font-size:14px }
+    .byline { margin:12px 0 20px }
+    .lead { max-width:43em; font-size:clamp(17px,2vw,20px) }
+    .action { display:inline-block; max-width:100%; margin:5px 0 8px; padding:10px 19px; border-radius:10px; color:white; background:var(--accent); font-weight:650; text-decoration:none }
+    section { margin-top:36px; padding-top:26px; border-top:1px solid var(--line) }
+    .case { margin:18px 0 0; width:100%; table-layout:fixed; border-collapse:collapse; background:#fff; font-size:clamp(13px,2vw,16px) }
+    .case th,.case td { padding:9px clamp(7px,2vw,15px); border:1px solid var(--line); text-align:left; overflow-wrap:anywhere }
+    .case th { color:#343f69; font-weight:650 }
+    .case thead { background:#e7eafb }
+    .case thead th:first-child { width:29% }
+    .code { font-family:ui-monospace,"Courier New",monospace; font-variant-numeric:tabular-nums }
+    figure { margin:18px 0 0 }
+    figure a { display:block; background:#fff; border-radius:12px; border:1px solid var(--line); overflow:hidden }
+    figure img { display:block; width:100%; height:auto }
+    figcaption { margin-top:6px }
+    ol { max-width:49em; margin:14px 0; padding-left:1.65em }
+    li { padding-left:3px; margin:8px 0 }
+    footer { color:var(--muted); padding:12px 0 28px; font-size:14px }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header><a class="brand" href="/"><i aria-hidden="true"></i>多店舵跨境工作台</a><a href="#contact">预约流程演示</a></header>
+    <main><article>
+      <h1>Ozon 一单两件商品，<wbr><span>采购单号</span>和成本怎么逐件核对？</h1>
+      <p class="byline">多店舵 MultiHelm · 操作指南 · <time datetime="2026-11-18">2026 年 11 月 18 日</time></p>
+      <p class="lead">先用 Ozon 平台单号定位订单，再按货号逐行核对。每一行分别记录采购平台、采购单号、国内快递单号和这行商品的采购总成本。改完一行，就能用另一行的单号和金额交叉检查。</p>
+      <a class="action" href="https://2529437553.github.io/ozon-erp-showcase/demo.html?order=DEMO-2026-001" target="_blank" rel="noopener">打开这笔样例订单 ↗</a>
+      <p class="note">免登录，在新标签页打开。样例数据保存在当前演示页面，刷新或点「重置演示」可从头练习。</p>
+      <section>
+        <h2>找到同一笔订单里的两件商品</h2>
+        <p>打开演示订单 <span class="code">DEMO-2026-001</span>，点「展开其余 1 项商品」。桌面收纳盒的货号是 <span class="code">DEMO-1-1</span>，旅行整理袋是 <span class="code">DEMO-1-2</span>。初始状态下，两行的采购单号、快递单号都是空的，成本都显示 18.50 元。</p>
+        <figure><a href="before.jpg" aria-label="放大填写前的两行订单截图"><img src="before.jpg" width="1012" height="443" alt="填写前的演示订单，两件商品各有自己的采购与货源入口，采购单号和快递单号均为空，行成本均为 18.50 元。"></a><figcaption>填写前的演示画面。点图可查看原图。</figcaption></figure>
+      </section>
+      <section>
+        <h2>把两份采购资料填到对应货号</h2>
+        <p>下面两份练习记录分别来自 1688 和拼多多。采购单号用来回查采购订单，国内快递单号用来查包裹。弹窗里的「商品行采购总成本(元)」填写这一行全部数量的采购成本。样例中两行的数量都是 1。</p>
+        <table class="case" aria-label="两件商品最终应该保存的采购资料">
+          <thead><tr><th scope="col">核对字段</th><th scope="col">桌面收纳盒</th><th scope="col">旅行整理袋</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">货号</th><td class="code">DEMO-1-1</td><td class="code">DEMO-1-2</td></tr>
+            <tr><th scope="row">采购平台</th><td>1688</td><td>拼多多</td></tr>
+            <tr><th scope="row">采购单号</th><td class="code">DEMO-CG-01</td><td class="code">DEMO-CG-02</td></tr>
+            <tr><th scope="row">国内快递单号</th><td class="code">DEMO-KD-01</td><td class="code">DEMO-KD-02</td></tr>
+            <tr><th scope="row">最终行成本</th><td>18.50 元</td><td>21.40 元</td></tr>
+          </tbody>
+        </table>
+        <ol>
+          <li>在<strong>桌面收纳盒</strong>这一行点「采购/货源」。选 1688，填入收纳盒对应的两个单号和 18.50 元，点「保存采购与货源」。</li>
+          <li>在<strong>旅行整理袋</strong>这一行点「采购/货源」。选拼多多，填入第二件商品对应的两个单号。为练习更正，先把成本填成 <strong>23.40 元</strong>并保存。</li>
+        </ol>
+      </section>
+      <section>
+        <h2>改错后，把两行重新打开看一次</h2>
+        <p>重新打开<strong>旅行整理袋</strong>的「采购/货源」，把 23.40 改为 <strong>21.40 元</strong>并保存。再次打开该行，检查成本及两个尾号为 02 的单号。然后打开<strong>桌面收纳盒</strong>，核对成本仍是 <strong>18.50 元</strong>，两个单号仍以 01 结尾。</p>
+        <figure><a href="after.jpg" aria-label="放大保存后的两行核对截图"><img src="after.jpg" width="1012" height="443" loading="lazy" alt="保存后，收纳盒保留 1688 的 DEMO-CG-01、DEMO-KD-01 和 18.50 元；整理袋显示拼多多的 DEMO-CG-02、DEMO-KD-02 和 21.40 元。"></a><figcaption>同一笔演示订单更正后的实际画面。两行的单号和金额可以分别回查。</figcaption></figure>
+      </section>
+      <section id="contact">
+        <h2>按你的采购流程看一次演示</h2>
+        <p>告诉我们你们在哪一步核对采购订单、由谁登记到仓包裹。预约邮件会带上这篇指南的名称，方便从相关环节开始演示。</p>
+        <a class="action" href="mailto:2529437553wuting@gmail.com?subject=%E9%A2%84%E7%BA%A6%E5%A4%9A%E5%BA%97%E8%88%B5%E6%BC%94%E7%A4%BA%EF%BD%9C%E5%8F%8C%E5%95%86%E5%93%81%E9%87%87%E8%B4%AD%E6%A0%B8%E5%AF%B9%E6%8C%87%E5%8D%97">预约采购流程演示</a>
+      </section>
+    </article></main>
+    <footer><a href="/">多店舵产品官网</a></footer>
+  </div>
+</body>
+</html>
