@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ozon 多店铺订单怎么核对采购成本？两家店同号的例子｜多店舵 MultiHelm</title>
+  <meta name="description" content="合并两家 Ozon 店铺的订单后，怎样避免把采购成本填错店？跟着一组同号演示记录，用店铺、完整单号和货号定位商品，再分店读回 13 元与 14 元。">
+  <link rel="canonical" href="https://multihelm.vetted-sourcing.com/guides/multi-store-order-cost-check/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Ozon 多店铺订单怎么核对采购成本？">
+  <meta property="og:description" content="两家店、相同的演示单号、两笔不同的成本。照着对账表核对，找出只看合计时会漏掉的问题。">
+  <meta property="og:url" content="https://multihelm.vetted-sourcing.com/guides/multi-store-order-cost-check/">
+  <meta property="og:image" content="https://multihelm.vetted-sourcing.com/assets/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Ozon 多店铺订单， 怎么核对采购成本？",
+    "inLanguage": "zh-CN",
+    "datePublished": "2026-11-22",
+    "dateModified": "2026-11-22",
+    "author": {"@type": "Organization", "name": "多店舵 MultiHelm", "url": "https://multihelm.vetted-sourcing.com/"},
+    "publisher": {"@type": "Organization", "name": "多店舵 MultiHelm", "url": "https://multihelm.vetted-sourcing.com/"},
+    "image": "https://multihelm.vetted-sourcing.com/assets/cover.png",
+    "mainEntityOfPage": "https://multihelm.vetted-sourcing.com/guides/multi-store-order-cost-check/"
+  }
+  </script>
+  <style>
+    * { box-sizing: border-box }
+    :root { color-scheme: light; --ink: #1b2140; --muted: #505d75; --accent: #3949ad; --line: #d7ddeb }
+    body { margin: 0; color: var(--ink); background: #f6f7fb; font: 17px/1.72 "PingFang SC", "Microsoft YaHei", system-ui, sans-serif }
+    .wrap { max-width: 850px; margin: auto; padding: 0 clamp(18px, 5vw, 34px) }
+    header, footer { display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 18px 0; font-size: 14px }
+    header { border-bottom: 1px solid var(--line) }
+    .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); font-size: 17px; font-weight: 700; text-decoration: none }
+    .brand i { display: grid; place-items: center; width: 27px; height: 27px; border-radius: 8px; background: #4b5bd7 }
+    .brand i::after { content: ""; width: 10px; height: 10px; border: 2px solid white; border-radius: 3px }
+    a { color: var(--accent); text-underline-offset: 3px }
+    :focus-visible { outline: 3px solid #374bb4; outline-offset: 4px }
+    article { padding: clamp(30px, 6vw, 58px) 0 22px }
+    h1, h2 { line-height: 1.3; text-wrap: balance; letter-spacing: -.035em }
+    .phrase { display: inline-block; max-width: 100% }
+    h1 { margin: 0; word-break: keep-all; overflow-wrap: break-word; font-size: clamp(30px, 5.2vw, 49px) }
+    h2 { margin: 0 0 10px; font-size: clamp(22px, 3.2vw, 29px) }
+    p { margin: 0 0 12px }
+    .meta { margin: 12px 0 19px; color: var(--muted); font-size: 14px }
+    .lead { font-size: clamp(18px, 2.5vw, 21px) }
+    section { padding-top: 22px; margin-top: 27px; border-top: 1px solid var(--line) }
+    table { width: 100%; table-layout: fixed; border-spacing: 0; border: 1px solid var(--line); background: white; border-radius: 10px; overflow: hidden; font-size: clamp(14px, 2.2vw, 17px) }
+    caption { text-align: left; font-size: 14px; margin-bottom: 7px; color: var(--muted) }
+    th, td { text-align: left; padding: 9px clamp(7px, 2vw, 16px); overflow-wrap: anywhere; border-bottom: 1px solid var(--line) }
+    thead { background: #e9edfa }
+    tbody th { color: #485470; font-weight: 500 }
+    tbody tr:last-child > * { border-bottom: 0 }
+    .ref, .amount { font-variant-numeric: tabular-nums }
+    .amount { font-weight: 700 }
+    ol { padding-left: 1.5em; margin: 10px 0 }
+    li { padding-left: .15em; margin-bottom: 7px }
+    details { background: #edf0fa; border-radius: 9px; padding: 10px 15px }
+    summary { color: var(--accent); font-weight: 650; cursor: pointer }
+    details p { margin: 8px 0 2px }
+    footer { border-top: 1px solid var(--line); padding-bottom: 32px }
+  </style>
+</head>
+<body><div class="wrap">
+  <header><a class="brand" href="/"><i aria-hidden="true"></i>多店舵跨境工作台</a><a href="/#contact">预约演示</a></header>
+  <main><article>
+    <h1>Ozon 多店铺订单， 怎么核对采购成本？</h1>
+    <p class="meta"><a href="/">多店舵 MultiHelm</a> · <time datetime="2026-11-22">2026 年 11 月 22 日</time></p>
+    <p class="lead">在多家店的汇总表里搜到相同单号时，先定位<strong>店铺、完整的平台单号、商品货号</strong>，再把采购凭证上的行成本填到对应商品。保存后切回每家店各查一次。两笔成本即使填反，合计也可能一分不差。</p>
+
+    <section>
+      <h2><span class="phrase">两家店都搜到同一单号，</span><wbr><span class="phrase">该改哪一行？</span></h2>
+      <p>假设你手上有两份采购凭证。A 店这行实付 13.00 元，B 店这行实付 14.00 元。为了检验串店问题，下面两条练习记录特意使用同一个单号。每行商品数量都是 1。</p>
+      <table>
+        <caption>两份虚构采购凭证，金额单位为人民币元</caption>
+        <thead><tr><th scope="col">核对项目</th><th scope="col">演示 A 店</th><th scope="col">演示 B 店</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">平台单号</th><td class="ref">DEMO-031</td><td class="ref">DEMO-031</td></tr>
+          <tr><th scope="row">商品货号</th><td class="ref">BOX-A</td><td class="ref">BOX-B</td></tr>
+          <tr><th scope="row">采购凭证号</th><td class="ref">CG-A-01</td><td class="ref">CG-B-02</td></tr>
+          <tr><th scope="row">商品行采购总成本</th><td class="amount">13.00</td><td class="amount">14.00</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>保存后，把两家店分开查一遍</h2>
+      <ol>
+        <li>在「我的订单」筛选 A 店，按完整平台单号查找。对上 <strong>BOX-A</strong> 和 A 店采购凭证，保存这行的 13.00 元。</li>
+        <li>切到 B 店，查同一个单号。对上 <strong>BOX-B</strong> 与 B 店采购凭证，保存这行的 14.00 元。</li>
+        <li>重新查询。分别在 A 店和 B 店打开对应的商品行，将保存值与上表的两份凭证逐笔比较。</li>
+      </ol>
+      <details><summary>如果两店合计都是 27.00 元，怎样发现串店？</summary>
+        <p>A 店 13.00 加 B 店 14.00，和 A 店 14.00 加 B 店 13.00，合计都是 27.00 元。只有前一组与两份凭证都相符。如果只有 B 店有差额，先打开 B 店的商品行核对，再回查 A 店原值。</p>
+      </details>
+    </section>
+
+    <section>
+      <h2>批量修改时，顺手验哪两件事？</h2>
+      <p><strong>每家店都收到了自己的值。</strong>多店舵的隔离演示用两家店的同号记录做过批量采购成本测试。给两条商品行分别保存 13 元和 14 元后，用完整单号查询这两家店，再逐店核对返回的商品行，各自读回了对应金额。</p>
+      <p><strong>用旧记录再提交一次会怎样？</strong>同一次演示还单独测试了批量备注。第一次保存成功后，沿用保存前的记录版本再次提交，服务端返回版本冲突。重新查询时，两家店都保留了第一次保存的备注。遇到这种情况，先读一遍当前备注，再决定要改哪一行。</p>
+    </section>
+
+    <section>
+      <h2>同一店铺、同一订单里有两件商品呢？</h2>
+      <p>先确认店铺，再按每行货号分别关联采购单号和国内快递单号。一笔 Ozon 订单还可能分为多个发运包裹，核对时也要看清手里的编号对应订单还是包裹。<a href="https://docs.ozon.ru/common/moj-zakaz/gde-moj-zakaz/" hreflang="ru">Ozon 官方关于拆分发运的说明（俄文）</a></p>
+      <p>上一篇有可以动手填写的双商品样例。打开旅行整理袋，改一行成本，再看收纳盒的金额和快递单号。<a href="/guides/order-purchase-check/">逐件核对采购成本和快递单号</a></p>
+    </section>
+  </article></main>
+  <footer><a href="/">多店舵产品官网</a><a href="/#contact">预约多店采购流程演示</a></footer>
+</div></body>
+</html>

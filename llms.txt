@@ -83,4 +83,5 @@ No. With one or two stores a free general-purpose ERP is enough.
 - [English](https://multihelm.vetted-sourcing.com/en/)
 - [中文](https://multihelm.vetted-sourcing.com/)
 - [两件商品的采购核对指南（中文）](https://multihelm.vetted-sourcing.com/guides/order-purchase-check/)
+- [Ozon 多店铺同号订单的采购成本核对（中文）](https://multihelm.vetted-sourcing.com/guides/multi-store-order-cost-check/)
 - [免登录样例订单](https://2529437553.github.io/ozon-erp-showcase/demo.html?order=DEMO-2026-001)
